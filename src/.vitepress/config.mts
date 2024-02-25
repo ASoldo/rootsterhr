@@ -9,6 +9,7 @@ export default defineConfig({
     root: { label: "Hrvatski", lang: "hr", ...hrConfig },
     en: { label: "English", lang: "en", ...enConfig },
   },
+
   themeConfig: {
     nav: [
       { text: "Guide", link: "/guide" },
@@ -32,8 +33,6 @@ export default defineConfig({
       },
     ],
 
-    socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
-    ],
+    socialLinks: [{ icon: "github", link: "https://github.com/ASoldo" }],
   },
 });

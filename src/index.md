@@ -3,12 +3,16 @@
 layout: home
 
 title: Rootster
-titleTemplate: Herramienta frontend de próxima generación
+titleTemplate: Alati visoke snage
 
 hero:
   name: "Rootster"
   text: "Full-Stack Development"
-  tagline: My great project tagline
+  tagline: Alati visoke snage
+  image:
+    light: /logo-black.svg
+    dark: /logo-white.svg
+    alt: Rootster
   actions:
     - theme: brand
       text: Markdown Examples
@@ -18,10 +22,13 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
+  - icon: 😀
+    title: Ideja A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
+  - icon: 😂
+    title: Ideja B
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
+  - icon: 🫠
+    title: Ideja C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
