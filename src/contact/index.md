@@ -1,3 +1,1 @@
-<!-- Kontakt informacije -->
-
 # Kontakt

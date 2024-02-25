@@ -10,6 +10,7 @@ export default defineConfig({
     en: { label: "English", lang: "en", ...enConfig },
   },
 
+  lastUpdated: true,
   themeConfig: {
     nav: [
       { text: "Guide", link: "/guide" },

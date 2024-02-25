@@ -1,6 +1,6 @@
 import type { DefaultTheme, LocaleSpecificConfig } from "vitepress";
 export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
-  title: `Rootster Hrvatski`,
+  title: `Rootster`,
 
   description: "Full-Stack Development",
   head: [],
@@ -24,6 +24,12 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
     nav: [
       {
+        text: "Započnite",
+        link: "/getting-started/",
+        activeMatch: "/getting-started/",
+      },
+
+      {
         text: "O Nama",
         link: "/about/",
         activeMatch: "/about/",
@@ -33,6 +39,12 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
         link: "/services/",
         activeMatch: "/services/",
       },
+
+      {
+        text: "Kontakt",
+        link: "/contact/",
+        activeMatch: "/contact/",
+      },
       {
         text: "Testna okolina",
         items: [
@@ -41,11 +53,6 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             link: "https://rootster.xyz",
           },
         ],
-      },
-      {
-        text: "Kontakt",
-        link: "/contact/",
-        activeMatch: "/contact/",
       },
     ],
 
@@ -80,11 +87,32 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
           items: [{ text: "Kontaktirajte nas", link: "/contact/" }],
         },
       ],
+      "/getting-started/": [
+        {
+          text: "Započnite",
+          items: [
+            {
+              text: "api-examples",
+              link: "/getting-started/sectiona/",
+            },
+            {
+              text: "mardown-examples",
+              link: "/getting-started/sectionb/",
+            },
+            {
+              text: "soldo",
+              items: [
+                { text: "soldo", link: "/getting-started/markdown-examples/" },
+              ],
+            },
+          ],
+        },
+      ],
     },
     lastUpdated: {
       text: "Updated at",
       formatOptions: {
-        dateStyle: "full",
+        dateStyle: "short",
         timeStyle: "medium",
         timeZone: "Europe/Zagreb",
       },
