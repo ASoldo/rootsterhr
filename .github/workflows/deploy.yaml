@@ -1,0 +1,70 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+        run: pnpm web:build
+
+      - name: Zip dist folder
+        run: zip -r rootsterhr-dist.zip src/.vitepress/dist/*
+
+      - name: Upload dist to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --exclude '*' --include '*.zip'
+        env:
+          AWS_S3_BUCKET: rootstergg-deploy-bucket
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Deploy to EC2 instance
+        uses: appleboy/scp-action@master
+        with:
+          host: 18.156.80.97
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: rootsterhr-dist.zip
+          target: ~/rootsterhr-dist.zip
+
+        env:
+          AWS_S3_BUCKET: rootstergg-deploy-bucket
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Unzip files
+        uses: appleboy/ssh-action@master
+        with:
+          host: 18.156.80.97
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            if [ ! -d "/var/www/html/rootsterhr" ]; then
+              sudo mkdir -p /var/www/html/rootsterhr
+            fi
+            sudo unzip -o ~/rootsterhr-dist.zip -d /var/www/html/rootsterhr
+            sudo rm -rf ~/rootsterhr-dist.zip
+
+      - name: Restart Caddy v2
+        uses: appleboy/ssh-action@master
+        with:
+          host: 18.156.80.97
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            sudo systemctl stop caddy
+            sudo systemctl start caddy
