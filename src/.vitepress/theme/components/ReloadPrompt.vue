@@ -40,8 +40,8 @@ onBeforeMount(async () => {
       <div id="pwa-message" class="mb-3">
         {{
           offlineReady
-          ? "App ready to work offline"
-          : "New content available, click the reload button to update."
+          ? "Aplikacija spremna za rad izvan mreže"
+          : "Dostupan je novi sadržaj, kliknite gumb za ponovno učitavanje za ažuriranje."
         }}
       </div>
       <button v-if="needRefresh" type="button" class="pwa-refresh" @click="updateServiceWorker?.()">
