@@ -10,6 +10,15 @@ export default withPwa(
     vite: {},
     title: "Rootster",
     description: "Full-Stack Development",
+    head: [
+      [
+        "meta",
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1, user-scalable=no",
+        },
+      ],
+    ],
     locales: {
       root: { label: "Hrvatski", lang: "hr", ...hrConfig },
       en: { label: "English", lang: "en", ...enConfig },
