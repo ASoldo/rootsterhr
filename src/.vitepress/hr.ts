@@ -24,7 +24,7 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
 
     nav: [
       {
-        text: "Započnite",
+        text: "Istražite Rootster",
         link: "/getting-started/",
         activeMatch: "/getting-started/",
       },
@@ -60,12 +60,14 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
       "/about/": [
         {
           text: "O nama",
+          collapsed: false,
           items: [{ text: "Uvod", link: "/about/" }],
         },
       ],
       "/services/": [
         {
           text: "Usluge",
+          collapsed: false,
           items: [
             { text: "Razvoj igara", link: "/services/game-development/" },
             {
@@ -84,12 +86,14 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
       "/contact/": [
         {
           text: "Kontakt",
+          collapsed: false,
           items: [{ text: "Kontaktirajte nas", link: "/contact/" }],
         },
       ],
       "/getting-started/": [
         {
-          text: "Započnite",
+          text: "Istražite Rootster",
+          collapsed: false,
           items: [
             {
               text: "api-examples",
@@ -98,12 +102,6 @@ export const hrConfig: LocaleSpecificConfig<DefaultTheme.Config> = {
             {
               text: "mardown-examples",
               link: "/getting-started/sectionb/",
-            },
-            {
-              text: "soldo",
-              items: [
-                { text: "soldo", link: "/getting-started/markdown-examples/" },
-              ],
             },
           ],
         },

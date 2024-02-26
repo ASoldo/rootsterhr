@@ -1,39 +1,74 @@
 import { defineConfig } from "vitepress";
+import { withPwa } from "@vite-pwa/vitepress";
 import { enConfig } from "./en";
 import { hrConfig } from "./hr";
 
-export default defineConfig({
-  title: "Rootster",
-  description: "Full-Stack Development",
-  locales: {
-    root: { label: "Hrvatski", lang: "hr", ...hrConfig },
-    en: { label: "English", lang: "en", ...enConfig },
-  },
-
-  lastUpdated: true,
-  themeConfig: {
-    nav: [
-      { text: "Guide", link: "/guide" },
-      { text: "Config", link: "/config" },
-      { text: "Changelog", link: "https://github.com/..." },
-    ],
-    search: {
-      provider: "local",
-      options: {
-        detailedView: true,
-      },
+const base = "/";
+export default withPwa(
+  defineConfig({
+    base,
+    vite: {},
+    title: "Rootster",
+    description: "Full-Stack Development",
+    locales: {
+      root: { label: "Hrvatski", lang: "hr", ...hrConfig },
+      en: { label: "English", lang: "en", ...enConfig },
     },
 
-    sidebar: [
-      {
-        text: "Guide",
-        items: [
-          { text: "Introduction", link: "/api-examples" },
-          { text: "Getting Started", link: "/markdown-examples" },
+    lastUpdated: true,
+    themeConfig: {
+      nav: [],
+      search: {
+        provider: "local",
+        options: {
+          detailedView: true,
+        },
+      },
+
+      sidebar: [],
+
+      socialLinks: [{ icon: "github", link: "https://github.com/ASoldo" }],
+    },
+    pwa: {
+      mode: "development",
+      strategies: "generateSW",
+      includeAssets: [
+        "favicon.ico",
+        "apple-touch-icon-180x180.png",
+        "maskable-icon-512x512.png",
+      ],
+      workbox: {
+        cleanupOutdatedCaches: true,
+        skipWaiting: true,
+        clientsClaim: true,
+        navigateFallback: "/",
+        globPatterns: ["**/*.{js,css,html,png,jpg,jpeg,svg,json,ico}"],
+        globIgnores: ["**/node_modules/**/*", "sw.ts", "workbox-*.js"],
+      },
+      experimental: {
+        includeAllowlist: true,
+      },
+      manifest: {
+        name: "Rootster",
+        short_name: "Rootster",
+        description: "Full-Stack Development",
+        theme_color: "#ffffff",
+        background_color: "#ffffff",
+        display: "standalone",
+        orientation: "portrait",
+        icons: [
+          {
+            src: "pwa-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "pwa-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
         ],
       },
-    ],
-
-    socialLinks: [{ icon: "github", link: "https://github.com/ASoldo" }],
-  },
-});
+    },
+  }),
+);

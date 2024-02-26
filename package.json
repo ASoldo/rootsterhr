@@ -5,10 +5,14 @@
   "scripts": {
     "web:dev": "vitepress dev src",
     "web:build": "vitepress build src",
-    "web:preview": "vitepress preview src"
+    "web:preview": "vitepress preview src",
+    "gpa": "pwa-assets-generator --preset minimal-2023 src/public/logo-white.svg"
   },
   "devDependencies": {
+    "@vite-pwa/assets-generator": "^0.2.4",
+    "@vite-pwa/vitepress": "^0.4.0",
     "vitepress": "1.0.0-rc.44",
-    "vue": "^3.4.19"
+    "vue": "^3.4.19",
+    "workbox-window": "^7.0.0"
   }
 }

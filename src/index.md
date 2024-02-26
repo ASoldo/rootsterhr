@@ -15,15 +15,15 @@ hero:
     alt: Rootster
   actions:
     - theme: brand
-      text: Zapocnite tu
-      link: /getting-started/sectionb/
+      text: Istražite Rootster
+      link: /getting-started/
     - theme: alt
       text: API Examples
       link: /getting-started/sectiona/
 features:
   - icon: 🎮
     title: Razvoj Igara
-    details: Izrada virtualnih 2D/3D igara za web, mobilne uređaje i konzole.
+    details: Izrada video igara (2D/3D) za web, mobilne uređaje i PC za sve vrste klijenata.
 
   - icon: 🌐
     title: Frontend Razvoj
@@ -31,7 +31,7 @@ features:
 
   - icon: 🔧
     title: Backend Razvoj
-    details: Izgradnja robustnih backend rješenja s Rust i Go, uključujući API-e, koristeći Docker za razvoj i distribuciju.
+    details: Izgradnja robustnih backend rješenja s Rust i Go jezicima, uključujući API-e, koristeći Docker za razvoj i distribuciju.
 
   - icon: ☁️
     title: Infrastruktura
@@ -40,4 +40,16 @@ features:
   - icon: 📦
     title: Upravljanje Sadržajem
     details: Optimizacija pohrane i distribucije sadržaja s cloud rješenjima i CDN-ovima za efikasno upravljanje digitalnim imovinama.
+
+  - icon: 🎨
+    title: Dizajn
+    details: Pružanje kompletnih dizajnerskih rješenja, od koncepta do finalne pripreme, za digitalne i tiskane medije.
+
+  - icon: 📊
+    title: Analitika
+    details: Implementacija naprednih analitičkih rješenja za praćenje performansi i sigurnosti aplikacija u stvarnom vremenu.
+
+  - icon: 💡
+    title: Prilagođena Rješenja
+    details: Razvoj inovativnih, prilagođenih rješenja za jedinstvene i specifične potrebe svakog klijenta.
 ---
