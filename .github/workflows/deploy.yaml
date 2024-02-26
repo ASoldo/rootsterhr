@@ -39,10 +39,9 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: rootsterhr-dist.zip
-          target: ~/rootsterhr-dist.zip
+          target: /home/ubuntu/rootsterhr-dist.zip
 
         env:
-          AWS_S3_BUCKET: rootstergg-deploy-bucket
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
