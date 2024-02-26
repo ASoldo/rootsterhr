@@ -30,8 +30,8 @@ export default withPwa(
       socialLinks: [{ icon: "github", link: "https://github.com/ASoldo" }],
     },
     pwa: {
-      mode: "development",
-      strategies: "generateSW",
+      strategies: "injectManifest",
+      filename: "sw.ts",
       includeAssets: [
         "favicon.ico",
         "apple-touch-icon-180x180.png",

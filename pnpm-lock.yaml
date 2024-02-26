@@ -17,6 +17,12 @@ devDependencies:
   vue:
     specifier: ^3.4.19
     version: 3.4.19
+  workbox-core:
+    specifier: ^7.0.0
+    version: 7.0.0
+  workbox-precaching:
+    specifier: ^7.0.0
+    version: 7.0.0
   workbox-window:
     specifier: ^7.0.0
     version: 7.0.0

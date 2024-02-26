@@ -13,6 +13,8 @@
     "@vite-pwa/vitepress": "^0.4.0",
     "vitepress": "1.0.0-rc.44",
     "vue": "^3.4.19",
+    "workbox-core": "^7.0.0",
+    "workbox-precaching": "^7.0.0",
     "workbox-window": "^7.0.0"
   }
 }
