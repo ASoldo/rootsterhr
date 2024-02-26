@@ -39,7 +39,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: rootsterhr-dist.zip
-          target: /home/ubuntu/rootsterhr-dist.zip
+          target: ~/
 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
