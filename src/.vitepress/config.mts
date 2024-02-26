@@ -52,8 +52,8 @@ export default withPwa(
         name: "Rootster",
         short_name: "Rootster",
         description: "Full-Stack Development",
-        theme_color: "#ffffff",
-        background_color: "#ffffff",
+        theme_color: "#009BD4",
+        background_color: "#009BD4",
         display: "standalone",
         orientation: "portrait",
         icons: [
