@@ -21,7 +21,9 @@ jobs:
         run: pnpm web:build
 
       - name: Zip dist folder
-        run: zip -r rootsterhr-dist.zip src/.vitepress/dist
+        run: |
+          cd src/.vitepress/dist
+          zip -r ../../../rootsterhr-dist.zip *
 
       - name: Upload dist to S3
         uses: jakejarvis/s3-sync-action@master
