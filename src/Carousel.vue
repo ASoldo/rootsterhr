@@ -105,7 +105,7 @@ useSwipe(target, {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 50;
+  z-index: 1;
   background-color: #009bd4;
   border: 2px solid;
   border-radius: 9999px;
