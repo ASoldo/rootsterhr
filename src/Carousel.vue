@@ -76,7 +76,7 @@ useSwipe(target, {
       activeSlide.value--;
     } else if (
       direction === "left" &&
-      activeSlide.value < slides.value.length - 1
+      activeSlide.value < props.slides?.length - 1
     ) {
       activeSlide.value++;
     }
