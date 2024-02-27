@@ -53,9 +53,13 @@
   /* --vp-c-brand-1: var(--vp-c-indigo-1); */
   /* --vp-c-brand-2: var(--vp-c-indigo-2); */
   /* --vp-c-brand-3: var(--vp-c-indigo-3); */
+
+  /* Custom Overrides */
   --vp-c-brand-1: #009bd4;
   --vp-c-brand-2: #009bd4;
   --vp-c-brand-3: #009bd4;
+  --vp-c-divider: transparent;
+  --vp-c-gutter: transparent;
 
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
 

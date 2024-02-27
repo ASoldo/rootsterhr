@@ -18,7 +18,6 @@ async function close() {
 }
 
 onBeforeMount(async () => {
-  // @ts-ignore
   const { registerSW } = await import("virtual:pwa-register");
   updateServiceWorker = registerSW({
     immediate: true,
@@ -40,14 +39,19 @@ onBeforeMount(async () => {
       <div id="pwa-message" class="mb-3">
         {{
           offlineReady
-          ? "Aplikacija spremna za rad izvan mreže"
-          : "Dostupan je novi sadržaj, kliknite gumb za ponovno učitavanje za ažuriranje."
+            ? "Aplikacija spremna za rad izvan mreže"
+            : "Dostupan je novi sadržaj, kliknite gumb za ponovno učitavanje za ažuriranje."
         }}
       </div>
-      <button v-if="needRefresh" type="button" class="pwa-refresh" @click="updateServiceWorker?.()">
-        Reload
+      <button
+        v-if="needRefresh"
+        type="button"
+        class="pwa-refresh"
+        @click="updateServiceWorker?.()"
+      >
+        Osvježi
       </button>
-      <button type="button" class="pwa-cancel" @click="close">Close</button>
+      <button type="button" class="pwa-cancel" @click="close">Zatvori</button>
     </div>
   </template>
 </template>
