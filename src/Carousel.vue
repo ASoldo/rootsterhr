@@ -6,7 +6,7 @@
         &#10094;
       </button>
 
-      <button class="nav-button right" :class="{ hidden: activeSlide === slides.length - 1 }"
+      <button class="nav-button right" :class="{ hidden: activeSlide === props.slides?.length - 1 }"
         :disabled="activeSlide === slides.length - 1" @click="activeSlide++">
         &#10095;
       </button>
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="pagination">
-      <div v-for="(_, index) in slides" :key="`pagination-${index}`" class="pagination-dot"
+      <div v-for="(_, index) in props.slides" :key="`pagination-${index}`" class="pagination-dot"
         :class="{ active: index === activeSlide }" @click="activeSlide = index"></div>
     </div>
   </div>
