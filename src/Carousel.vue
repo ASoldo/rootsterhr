@@ -7,7 +7,7 @@
       </button>
 
       <button class="nav-button right" :class="{ hidden: activeSlide === props.slides?.length - 1 }"
-        :disabled="activeSlide === slides.length - 1" @click="activeSlide++">
+        :disabled="activeSlide === props.slides?.length - 1" @click="activeSlide++">
         &#10095;
       </button>
 
