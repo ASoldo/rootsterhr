@@ -13,7 +13,7 @@
 import { ref, onMounted, withDefaults } from "vue";
 import { Background } from "@vue-flow/background";
 import { Elements, Position, MarkerType } from "@vue-flow/core";
-import { VueFlow, useVueFlow } from "@vue-flow/core";
+import { VueFlow } from "@vue-flow/core";
 import { Controls } from "@vue-flow/controls";
 import { MiniMap } from "@vue-flow/minimap";
 
@@ -22,19 +22,9 @@ const props = withDefaults(
     elements: Elements[];
   }>(),
   {
-    elements: [] as never,
+    elements: [],
   },
 );
-
-const { addEdges } = useVueFlow();
-// onMounted(() => {
-//   addEdges([
-//     {
-//       source: "1",
-//       target: "2",
-//     },
-//   ]);
-// });
 </script>
 
 <style>

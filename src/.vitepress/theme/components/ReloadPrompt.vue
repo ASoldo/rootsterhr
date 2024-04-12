@@ -1,3 +1,21 @@
+<template>
+  <template v-if="offlineReady || needRefresh">
+    <div class="pwa-toast" role="alertdialog" aria-labelledby="pwa-message">
+      <div id="pwa-message" class="mb-3">
+        {{
+          offlineReady
+            ? "Aplikacija spremna za rad izvan mreže"
+            : "Dostupan je novi sadržaj, kliknite gumb za ponovno učitavanje za ažuriranje."
+        }}
+      </div>
+      <button v-if="needRefresh" type="button" class="pwa-refresh" @click="updateServiceWorker?.()">
+        Osvježi
+      </button>
+      <button type="button" class="pwa-cancel" @click="close">Zatvori</button>
+    </div>
+  </template>
+</template>
+
 <script setup lang="ts">
 import { onBeforeMount, ref } from "vue";
 
@@ -32,29 +50,6 @@ onBeforeMount(async () => {
   });
 });
 </script>
-
-<template>
-  <template v-if="offlineReady || needRefresh">
-    <div class="pwa-toast" role="alertdialog" aria-labelledby="pwa-message">
-      <div id="pwa-message" class="mb-3">
-        {{
-          offlineReady
-            ? "Aplikacija spremna za rad izvan mreže"
-            : "Dostupan je novi sadržaj, kliknite gumb za ponovno učitavanje za ažuriranje."
-        }}
-      </div>
-      <button
-        v-if="needRefresh"
-        type="button"
-        class="pwa-refresh"
-        @click="updateServiceWorker?.()"
-      >
-        Osvježi
-      </button>
-      <button type="button" class="pwa-cancel" @click="close">Zatvori</button>
-    </div>
-  </template>
-</template>
 
 <style>
 .pwa-toast {
