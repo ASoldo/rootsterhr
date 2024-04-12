@@ -1,20 +1,70 @@
 <template>
   <div style="width: 100%; height: 500px; position: relative; overflow: hidden">
-    <VueFlow fit-view-on-init :nodes-draggable="false" :default-viewport="{ zoom: 0.5 }" :max-zoom="2" :min-zoom="0.1"
-      v-model="props.elements">
+    <VueFlow
+      fit-view-on-init
+      :nodes-draggable="false"
+      :default-viewport="{ zoom: 0.5 }"
+      :max-zoom="2"
+      :min-zoom="0.1"
+      :nodes="props.nodes"
+      :edges="props.edges"
+      v-model="props.nodes"
+    >
       <Background />
       <MiniMap />
       <Controls />
       <Panel>
-        <img style="background: whitesmoke; padding: 3px; border-radius: 50%" width="40" src="/logo-black.svg" />
+        <img
+          style="background: whitesmoke; padding: 3px; border-radius: 50%"
+          width="40"
+          src="/logo-black.svg"
+        />
       </Panel>
-      <template #node-output="props">
+
+      <template #node-custom="props">
         <img width="40" :src="props.data.imgSrc" />
-        <h1>{{ props.label }}</h1>
-      </template>
-      <template #node-input="props">
-        <img width="40" :src="props.data.imgSrc" />
-        <h1>{{ props.label }}</h1>
+        <span>{{ props.label }} {{ props.id }}</span>
+        <Handle
+          :id="`${props.id}topt`"
+          :position="Position.Top"
+          type="target"
+        />
+        <Handle
+          :id="`${props.id}rightt`"
+          :position="Position.Right"
+          type="target"
+        />
+        <Handle
+          :id="`${props.id}leftt`"
+          :position="Position.Left"
+          type="target"
+        />
+        <Handle
+          :id="`${props.id}bottomt`"
+          :position="Position.Bottom"
+          type="target"
+        />
+
+        <Handle
+          :id="`${props.id}tops`"
+          :position="Position.Top"
+          type="source"
+        />
+        <Handle
+          :id="`${props.id}rights`"
+          :position="Position.Right"
+          type="source"
+        />
+        <Handle
+          :id="`${props.id}lefts`"
+          :position="Position.Left"
+          type="source"
+        />
+        <Handle
+          :id="`${props.id}bottoms`"
+          :position="Position.Bottom"
+          type="source"
+        />
       </template>
     </VueFlow>
   </div>
@@ -24,21 +74,18 @@
 import { ref, onMounted, withDefaults } from "vue";
 import { Background } from "@vue-flow/background";
 import { Elements, Position, MarkerType } from "@vue-flow/core";
-import {
-  VueFlow,
-  Panel,
-  useNodesData,
-  useHandleConnections,
-} from "@vue-flow/core";
+import { VueFlow, Handle, Panel, BezierEdge } from "@vue-flow/core";
 import { Controls } from "@vue-flow/controls";
 import { MiniMap } from "@vue-flow/minimap";
 
 const props = withDefaults(
   defineProps<{
-    elements: Elements[];
+    nodes: Elements[];
+    edges: Elements[];
   }>(),
   {
-    elements: [],
+    nodes: [],
+    edges: [],
   },
 );
 </script>
@@ -72,6 +119,7 @@ const props = withDefaults(
 .vue-flow__node {
   font-size: 1.5rem;
   font-weight: bold;
+  color: black;
   font-family:
     system-ui,
     -apple-system,
