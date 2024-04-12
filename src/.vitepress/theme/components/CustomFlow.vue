@@ -5,6 +5,17 @@
       <Background />
       <MiniMap />
       <Controls />
+      <Panel>
+        <img style="background: whitesmoke; padding: 3px; border-radius: 50%" width="40" src="/logo-black.svg" />
+      </Panel>
+      <template #node-output="props">
+        <img width="40" :src="props.data.imgSrc" />
+        <h1>{{ props.label }}</h1>
+      </template>
+      <template #node-input="props">
+        <img width="40" :src="props.data.imgSrc" />
+        <h1>{{ props.label }}</h1>
+      </template>
     </VueFlow>
   </div>
 </template>
@@ -13,7 +24,12 @@
 import { ref, onMounted, withDefaults } from "vue";
 import { Background } from "@vue-flow/background";
 import { Elements, Position, MarkerType } from "@vue-flow/core";
-import { VueFlow } from "@vue-flow/core";
+import {
+  VueFlow,
+  Panel,
+  useNodesData,
+  useHandleConnections,
+} from "@vue-flow/core";
 import { Controls } from "@vue-flow/controls";
 import { MiniMap } from "@vue-flow/minimap";
 

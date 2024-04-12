@@ -13,6 +13,13 @@ const elements = ref([
     type: "output",
     targetPosition: Position.Bottom,
     class: "grad",
+     style: {
+      width: "200px",
+      height: "100px",
+    },
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
   },
   {
     id: "2",
@@ -23,23 +30,42 @@ const elements = ref([
     sourcePosition: Position.Top,
     style: {
       backgroundColor: "rgba(16, 185, 129, 0.5)",
-      width: "200px",
-      height: "300px",
+      width: "300px",
+      height: "400px",
     },
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
   },
   {
     id: "2a",
     class: "grad",
-    position: { x: 50, y: 40 },
+    position: { x: 50, y: 100 },
     label: "child",
     parentNode: "2",
+    type: "input",
+    style: {
+      width: "200px",
+      height: "100px",
+    },
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
   },
   {
     id: "2a1",
     class: "grad",
-    position: { x: 50, y: 120 },
+    position: { x: 50, y: 250 },
     label: "child",
     parentNode: "2",
+    type: "input",
+            style: {
+      width: "200px",
+      height: "100px",
+    },
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
   },
   {
     id: "3",
@@ -48,6 +74,13 @@ const elements = ref([
     label: "Game",
     type: "input",
     sourcePosition: Position.Top,
+      style: {
+      width: "200px",
+      height: "100px",
+    },
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
   },
   {
     id: "e1-2",
@@ -61,8 +94,8 @@ const elements = ref([
   },
   {
     id: "e1-3",
-    source: "3",
-    target: "1",
+    source: "1",
+    target: "3",
     animated: true,
     label: "HTTP Request",
     labelBgStyle: { fill: "orange" },
