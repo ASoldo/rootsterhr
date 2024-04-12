@@ -1,6 +1,6 @@
 import {
   useVueFlow
-} from "./chunk-K5MY3CEZ.js";
+} from "./chunk-ZDKYJR2O.js";
 import {
   computed,
   createBaseVNode,
@@ -14,9 +14,9 @@ import {
   renderSlot,
   toRef,
   unref
-} from "./chunk-UTGH4N2I.js";
+} from "./chunk-3DXR62HT.js";
 
-// node_modules/.pnpm/@vue-flow+background@1.3.0_@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/background/dist/vue-flow-background.mjs
+// node_modules/.pnpm/@vue-flow+background@1.3.0_@vue-flow+core@1.33.5_vue@3.4.21/node_modules/@vue-flow/background/dist/vue-flow-background.mjs
 var BackgroundVariant = ((BackgroundVariant2) => {
   BackgroundVariant2["Lines"] = "lines";
   BackgroundVariant2["Dots"] = "dots";

@@ -45,9 +45,9 @@ import {
   useSlots,
   watch,
   withCtx
-} from "./chunk-UTGH4N2I.js";
+} from "./chunk-3DXR62HT.js";
 
-// node_modules/.pnpm/@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/core/dist/vue-flow-core.mjs
+// node_modules/.pnpm/@vue-flow+core@1.33.5_vue@3.4.21/node_modules/@vue-flow/core/dist/vue-flow-core.mjs
 function tryOnScopeDispose(fn) {
   if (getCurrentScope()) {
     onScopeDispose(fn);
@@ -9817,4 +9817,4 @@ export {
   useHandleConnections,
   useNodesData
 };
-//# sourceMappingURL=chunk-K5MY3CEZ.js.map
+//# sourceMappingURL=chunk-ZDKYJR2O.js.map

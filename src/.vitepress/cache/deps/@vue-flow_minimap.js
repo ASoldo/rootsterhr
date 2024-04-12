@@ -4,7 +4,7 @@ import {
   getConnectedEdges,
   getRectOfNodes,
   useVueFlow
-} from "./chunk-K5MY3CEZ.js";
+} from "./chunk-ZDKYJR2O.js";
 import {
   Fragment,
   computed,
@@ -30,9 +30,9 @@ import {
   useSlots,
   watchEffect,
   withCtx
-} from "./chunk-UTGH4N2I.js";
+} from "./chunk-3DXR62HT.js";
 
-// node_modules/.pnpm/@vue-flow+minimap@1.4.0_@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/minimap/dist/vue-flow-minimap.mjs
+// node_modules/.pnpm/@vue-flow+minimap@1.4.0_@vue-flow+core@1.33.5_vue@3.4.21/node_modules/@vue-flow/minimap/dist/vue-flow-minimap.mjs
 var noop = { value: () => {
 } };
 function dispatch() {

@@ -2,6 +2,7 @@
 # https://vitepress.dev/reference/default-theme-home-page
 # svg icons - https://www.svgrepo.com/svg/384199/multiplayer-online-games-joystick?edit=true
 # svg icons - https://icones.js.org/collection/mdi?s=code&icon=mdi:application-brackets-outline
+# css gradients - https://cssgradient.io/gradient-backgrounds/
 layout: home
 
 title: Rootster

@@ -3,7 +3,8 @@ import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import ReloadPrompt from "./components/ReloadPrompt.vue";
-import Carousel from "../../Carousel.vue";
+import Carousel from "./components/Carousel.vue";
+import CustomFlow from "./components/CustomFlow.vue";
 import "./style.css";
 
 export default {
@@ -15,7 +16,7 @@ export default {
     });
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
     app.component("Carousel", Carousel);
+    app.component("CustomFlow", CustomFlow);
   },
 } satisfies Theme;

@@ -48,27 +48,6 @@ const props = withDefaults(
   },
 );
 
-const slides = ref([
-  {
-    content: "Igraj",
-    content_text: "I PRONADI PROIZVODE",
-    color: "red",
-    image: "/image1.png",
-  },
-  {
-    content: "Slide 2",
-    content_text: "I PRONADI PROIZVODE",
-    color: "lime",
-    image: "/image1.png",
-  },
-  {
-    content: "Slide 3",
-    content_text: "I PRONADI PROIZVODE",
-    color: "cyan",
-    image: "/image1.png",
-  },
-]);
-
 useSwipe(target, {
   passive: true,
   onSwipeEnd(_: TouchEvent, direction) {
