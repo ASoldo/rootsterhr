@@ -1,47 +1,74 @@
 {
-  "hash": "ab369fab",
+  "hash": "c994a5be",
   "configHash": "17fc6bb0",
-  "lockfileHash": "a9cc5294",
-  "browserHash": "b8f3ec8f",
+  "lockfileHash": "347f797a",
+  "browserHash": "2ebaf73f",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.4.19/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "629b1af9",
+      "fileHash": "6c8a1618",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.0.15_vue@3.4.19/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "b265a5e5",
+      "fileHash": "b73e92dd",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/.pnpm/@vueuse+core@10.8.0_vue@3.4.19/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "3a396369",
+      "fileHash": "f3851555",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/.pnpm/@vueuse+integrations@10.8.0_focus-trap@7.5.4_vue@3.4.19/node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "a750f7c3",
+      "fileHash": "e394f155",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/.pnpm/mark.js@8.11.1/node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "734ba588",
+      "fileHash": "58856691",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/.pnpm/minisearch@6.3.0/node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "3acbcad0",
+      "fileHash": "533fe03a",
+      "needsInterop": false
+    },
+    "@vue-flow/core": {
+      "src": "../../../../node_modules/.pnpm/@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/core/dist/vue-flow-core.mjs",
+      "file": "@vue-flow_core.js",
+      "fileHash": "72c79e78",
+      "needsInterop": false
+    },
+    "@vue-flow/background": {
+      "src": "../../../../node_modules/.pnpm/@vue-flow+background@1.3.0_@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/background/dist/vue-flow-background.mjs",
+      "file": "@vue-flow_background.js",
+      "fileHash": "582b935e",
+      "needsInterop": false
+    },
+    "@vue-flow/minimap": {
+      "src": "../../../../node_modules/.pnpm/@vue-flow+minimap@1.4.0_@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/minimap/dist/vue-flow-minimap.mjs",
+      "file": "@vue-flow_minimap.js",
+      "fileHash": "2039ed04",
+      "needsInterop": false
+    },
+    "@vue-flow/controls": {
+      "src": "../../../../node_modules/.pnpm/@vue-flow+controls@1.1.1_@vue-flow+core@1.33.5_vue@3.4.19/node_modules/@vue-flow/controls/dist/vue-flow-controls.mjs",
+      "file": "@vue-flow_controls.js",
+      "fileHash": "5ab4e20d",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-K5MY3CEZ": {
+      "file": "chunk-K5MY3CEZ.js"
+    },
     "chunk-GETBQIRZ": {
       "file": "chunk-GETBQIRZ.js"
     },

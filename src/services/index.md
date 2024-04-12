@@ -9,3 +9,5 @@ const slides = [
 </script>
 
 <Carousel :slides="slides" />
+
+olla
