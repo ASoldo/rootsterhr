@@ -1,3 +1,7 @@
+<template>
+  <BaseEdge :path="path[0]" :marker-end="markerEnd" :style="{ stroke: 'green', strokeWidth: '2px' }" />
+</template>
+
 <script lang="ts" setup>
 import { computed } from "vue";
 import type { EdgeProps } from "@vue-flow/core";
@@ -56,7 +60,3 @@ const path = computed(() =>
   }),
 );
 </script>
-
-<template>
-  <BaseEdge :path="path[0]" :marker-end="markerEnd" :style="{ stroke: 'green', strokeWidth: '2px' }" />
-</template>
