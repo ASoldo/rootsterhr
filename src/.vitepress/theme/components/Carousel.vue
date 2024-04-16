@@ -32,19 +32,21 @@
 import { ref, withDefaults } from "vue";
 import { useSwipe } from "@vueuse/core";
 
+type Slides = {
+  content: string;
+  content_text: string;
+  color: string;
+  image: string;
+};
+
 const target = ref<HTMLElement | null>(null);
 const activeSlide = ref(0);
 const props = withDefaults(
   defineProps<{
-    slides: {
-      content: string;
-      content_text: string;
-      color: string;
-      image: string;
-    }[];
+    slides: Slides[];
   }>(),
   {
-    slides: [] as any,
+    slides: () => [] as Slides[],
   },
 );
 
