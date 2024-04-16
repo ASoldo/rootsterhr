@@ -44,7 +44,7 @@ const props = withDefaults(
     }[];
   }>(),
   {
-    slides: [],
+    slides: [] as any,
   },
 );
 
