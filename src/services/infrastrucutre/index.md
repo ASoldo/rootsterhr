@@ -1,5 +1,11 @@
 # Infrastructure
 
+## Demo
+
+### This is our demo for Custom Flow
+
+<CustomFlow :nodes="nodes" :edges="edges" />
+
 <script setup>
 import { ref } from "vue";
 import { Background } from "@vue-flow/background";
@@ -265,9 +271,3 @@ const nodes = ref([
 ]);
 
 </script>
-
-## Demo
-
-### This is our demo for Custom Flow
-
-<CustomFlow :nodes="nodes" :edges="edges" />
