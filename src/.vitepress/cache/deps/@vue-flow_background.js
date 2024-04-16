@@ -1,6 +1,6 @@
 import {
   useVueFlow
-} from "./chunk-ZDKYJR2O.js";
+} from "./chunk-WJZX5ZQN.js";
 import {
   computed,
   createBaseVNode,
@@ -14,7 +14,7 @@ import {
   renderSlot,
   toRef,
   unref
-} from "./chunk-3DXR62HT.js";
+} from "./chunk-IY6CN43X.js";
 
 // node_modules/.pnpm/@vue-flow+background@1.3.0_@vue-flow+core@1.33.5_vue@3.4.21/node_modules/@vue-flow/background/dist/vue-flow-background.mjs
 var BackgroundVariant = ((BackgroundVariant2) => {

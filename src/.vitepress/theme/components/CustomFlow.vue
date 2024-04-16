@@ -3,7 +3,7 @@
     <!-- <button popovertarget="pop">Toggle</button> -->
     <!-- <div id="pop" popover>Olla</div> -->
     <VueFlow fit-view-on-init :nodes-draggable="false" :default-viewport="{ zoom: 0.5 }" :max-zoom="2" :min-zoom="0.1"
-      :nodes="props.nodes" :edges="props.edges" v-model="props.nodes">
+      :nodes="props.nodes" :edges="props.edges" v-model="props.nodes" :connection-mode="ConnectionMode.Loose">
       <Background />
       <MiniMap />
       <Controls />
@@ -24,6 +24,13 @@
         <Handle :id="`${props.id}lefts`" :position="Position.Left" type="source" />
         <Handle :id="`${props.id}bottoms`" :position="Position.Bottom" type="source" />
       </template>
+
+      <template #edge-custom="edgeProps">
+        <CustomEdge v-bind="edgeProps" />
+      </template>
+      <template #node-group="groupNodeProps">
+        <GroupNode v-bind="groupNodeProps" />
+      </template>
     </VueFlow>
   </div>
 </template>
@@ -31,10 +38,12 @@
 <script setup lang="ts">
 import { ref, onMounted, withDefaults } from "vue";
 import { Background } from "@vue-flow/background";
-import { Elements, Position, MarkerType } from "@vue-flow/core";
+import { Elements, Position, MarkerType, ConnectionMode } from "@vue-flow/core";
 import { VueFlow, Handle, Panel, BezierEdge } from "@vue-flow/core";
 import { Controls } from "@vue-flow/controls";
 import { MiniMap } from "@vue-flow/minimap";
+import GroupNode from "./GroupNode.vue";
+import CustomEdge from "./CustomEdge.vue";
 
 const props = withDefaults(
   defineProps<{

@@ -124,16 +124,77 @@ const edges = ref([
     markerEnd: MarkerType.ArrowClosed,
     type: "smoothstep",
   },
+  {
+    id: 'e9-10',
+    source: '9',
+    target: '9a',
+    sourceHandle: '9-target',
+    type: 'custom',
+    animated: true,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      color: 'green',
+    },
+  },
+  {
+    id: 'e9a-9b',
+    source: '9a',
+    target: '9b',
+    type: 'custom',
+    animated: true,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      color: 'green',
+    },
+  },
+  {
+    id: 'e9b-9',
+    source: '9b',
+    target: '9',
+    targetHandle: '9-source',
+    type: 'custom',
+    animated: true,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      color: 'green',
+    },
+  },
 ]);
 
-const elements = ref([
+const nodes = ref([
+  {
+    id: "9",
+    position: { x: 400, y: 0 },
+    label: "Custom",
+    type: "group",
+    class: "grad",
+    style: {
+      width: "200px",
+      height: "200px",
+    },
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
+  },
+  {
+    id: '9a',
+    label: 'Child a',
+    position: { x: 0, y: 50 },
+    parentNode: '9',
+  },
+  {
+    id: '9b',
+    label: 'Child b',
+    position: { x: 0, y: 120 },
+    parentNode: '9',
+  },
   {
     id: "1",
     position: { x: 0, y: 0 },
     label: "Server",
     type: "custom",
     class: "grad",
-     style: {
+    style: {
       width: "200px",
       height: "100px",
     },
@@ -209,4 +270,4 @@ const elements = ref([
 
 ### This is our demo for Custom Flow
 
-<CustomFlow :nodes="elements" :edges="edges" />
+<CustomFlow :nodes="nodes" :edges="edges" />

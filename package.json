@@ -11,6 +11,7 @@
   "devDependencies": {
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vite-pwa/vitepress": "^0.4.0",
+    "typescript": "^5.4.5",
     "vitepress": "1.0.0-rc.44",
     "vue": "^3.4.21",
     "workbox-core": "^7.0.0",
