@@ -1,70 +1,28 @@
 <template>
   <div style="width: 100%; height: 500px; position: relative; overflow: hidden">
-    <VueFlow
-      fit-view-on-init
-      :nodes-draggable="false"
-      :default-viewport="{ zoom: 0.5 }"
-      :max-zoom="2"
-      :min-zoom="0.1"
-      :nodes="props.nodes"
-      :edges="props.edges"
-      v-model="props.nodes"
-    >
+    <!-- <button popovertarget="pop">Toggle</button> -->
+    <!-- <div id="pop" popover>Olla</div> -->
+    <VueFlow fit-view-on-init :nodes-draggable="false" :default-viewport="{ zoom: 0.5 }" :max-zoom="2" :min-zoom="0.1"
+      :nodes="props.nodes" :edges="props.edges" v-model="props.nodes">
       <Background />
       <MiniMap />
       <Controls />
-      <Panel>
-        <img
-          style="background: whitesmoke; padding: 3px; border-radius: 50%"
-          width="40"
-          src="/logo-black.svg"
-        />
+      <Panel position="top-left">
+        <img style="background: whitesmoke; padding: 3px; border-radius: 50%" width="40" src="/logo-black.svg" />
       </Panel>
 
       <template #node-custom="props">
         <img width="40" :src="props.data.imgSrc" />
         <span>{{ props.label }} {{ props.id }}</span>
-        <Handle
-          :id="`${props.id}topt`"
-          :position="Position.Top"
-          type="target"
-        />
-        <Handle
-          :id="`${props.id}rightt`"
-          :position="Position.Right"
-          type="target"
-        />
-        <Handle
-          :id="`${props.id}leftt`"
-          :position="Position.Left"
-          type="target"
-        />
-        <Handle
-          :id="`${props.id}bottomt`"
-          :position="Position.Bottom"
-          type="target"
-        />
+        <Handle :id="`${props.id}topt`" :position="Position.Top" type="target" />
+        <Handle :id="`${props.id}rightt`" :position="Position.Right" type="target" />
+        <Handle :id="`${props.id}leftt`" :position="Position.Left" type="target" />
+        <Handle :id="`${props.id}bottomt`" :position="Position.Bottom" type="target" />
 
-        <Handle
-          :id="`${props.id}tops`"
-          :position="Position.Top"
-          type="source"
-        />
-        <Handle
-          :id="`${props.id}rights`"
-          :position="Position.Right"
-          type="source"
-        />
-        <Handle
-          :id="`${props.id}lefts`"
-          :position="Position.Left"
-          type="source"
-        />
-        <Handle
-          :id="`${props.id}bottoms`"
-          :position="Position.Bottom"
-          type="source"
-        />
+        <Handle :id="`${props.id}tops`" :position="Position.Top" type="source" />
+        <Handle :id="`${props.id}rights`" :position="Position.Right" type="source" />
+        <Handle :id="`${props.id}lefts`" :position="Position.Left" type="source" />
+        <Handle :id="`${props.id}bottoms`" :position="Position.Bottom" type="source" />
       </template>
     </VueFlow>
   </div>
@@ -80,12 +38,12 @@ import { MiniMap } from "@vue-flow/minimap";
 
 const props = withDefaults(
   defineProps<{
-    nodes: Elements[];
-    edges: Elements[];
+    nodes: [];
+    edges: [];
   }>(),
   {
-    nodes: [],
-    edges: [],
+    nodes: [] as never,
+    edges: [] as never,
   },
 );
 </script>
