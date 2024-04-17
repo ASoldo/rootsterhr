@@ -165,6 +165,32 @@ const edges = ref([
       color: 'green',
     },
   },
+  {
+    id: 'e1-9',
+    source: '1',
+    target: '9',
+    targetHandle: '9-target',
+    sourceHandle: "1rights",
+    type: 'custom',
+    animated: true,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      color: 'green',
+    },
+  },
+  {
+    id: 'e9-3',
+    source: '9',
+    target: '3',
+    targetHandle: '3bottomt',
+    sourceHandle: "9-source",
+    type: 'custom',
+    animated: true,
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+      color: 'green',
+    },
+  },
 ]);
 
 const nodes = ref([
@@ -175,8 +201,8 @@ const nodes = ref([
     type: "group",
     class: "grad-green",
     style: {
-      width: "200px",
-      height: "200px",
+      width: "400px",
+      height: "400px",
     },
     data: {
       imgSrc: "/logo-black.svg"
@@ -186,15 +212,24 @@ const nodes = ref([
     id: '9a',
     label: 'Child a',
     class: "grad",
-    position: { x: 0, y: 50 },
+    type: "group",
+    position: { x: 150, y: 70 },
     parentNode: '9',
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
+
   },
   {
     id: '9b',
     label: 'Child b',
     class: "grad",
-    position: { x: 0, y: 120 },
+    position: { x: 15, y: 220 },
     parentNode: '9',
+    type: "group",
+    data: {
+      imgSrc: "/logo-black.svg"
+    }
   },
   {
     id: "1",

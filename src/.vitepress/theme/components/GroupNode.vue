@@ -2,6 +2,7 @@
   <div class="vue-flow__group-node">
     <Handle :id="`${id}-target`" type="target" :position="Position.Top" />
 
+    <img :src="props.data.imgSrc" alt="placeholder" width="40" />
     <strong>Group {{ label }}</strong>
 
     <Handle :id="`${id}-source`" type="source" :position="Position.Bottom" />

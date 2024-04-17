@@ -11,6 +11,7 @@ import {
   getBezierPath,
   useVueFlow,
   Position,
+  getSmoothStepPath,
 } from "@vue-flow/core";
 
 const props = defineProps<EdgeProps>();
@@ -49,7 +50,7 @@ function isParentToChild(direction: "source" | "target") {
 }
 
 const path = computed(() =>
-  getBezierPath({
+  getSmoothStepPath({
     ...props,
     sourcePosition: isSourceParentToChild.value
       ? oppositeDirection[props.sourcePosition]
