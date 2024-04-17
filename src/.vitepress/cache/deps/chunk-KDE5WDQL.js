@@ -47,7 +47,7 @@ import {
   withCtx
 } from "./chunk-IY6CN43X.js";
 
-// node_modules/.pnpm/@vue-flow+core@1.33.5_vue@3.4.21/node_modules/@vue-flow/core/dist/vue-flow-core.mjs
+// node_modules/.pnpm/@vue-flow+core@1.33.5_vue@3.4.21_typescript@5.4.5_/node_modules/@vue-flow/core/dist/vue-flow-core.mjs
 function tryOnScopeDispose(fn) {
   if (getCurrentScope()) {
     onScopeDispose(fn);
@@ -9817,4 +9817,4 @@ export {
   useHandleConnections,
   useNodesData
 };
-//# sourceMappingURL=chunk-WJZX5ZQN.js.map
+//# sourceMappingURL=chunk-KDE5WDQL.js.map

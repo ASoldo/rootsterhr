@@ -4,7 +4,7 @@ import {
   getConnectedEdges,
   getRectOfNodes,
   useVueFlow
-} from "./chunk-WJZX5ZQN.js";
+} from "./chunk-KDE5WDQL.js";
 import {
   Fragment,
   computed,
@@ -32,7 +32,7 @@ import {
   withCtx
 } from "./chunk-IY6CN43X.js";
 
-// node_modules/.pnpm/@vue-flow+minimap@1.4.0_@vue-flow+core@1.33.5_vue@3.4.21/node_modules/@vue-flow/minimap/dist/vue-flow-minimap.mjs
+// node_modules/.pnpm/@vue-flow+minimap@1.4.0_@vue-flow+core@1.33.5_vue@3.4.21_typescript@5.4.5___vue@3.4.21_typescript@5.4.5_/node_modules/@vue-flow/minimap/dist/vue-flow-minimap.mjs
 var noop = { value: () => {
 } };
 function dispatch() {

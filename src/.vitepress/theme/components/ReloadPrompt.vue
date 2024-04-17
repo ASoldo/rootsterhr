@@ -36,6 +36,7 @@ async function close() {
 }
 
 onBeforeMount(async () => {
+  /// <reference types="vite-plugin-pwa/client" />
   const { registerSW } = await import("virtual:pwa-register");
   updateServiceWorker = registerSW({
     immediate: true,
