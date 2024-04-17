@@ -17,10 +17,10 @@ const props = defineProps<NodeProps>();
 
 <style>
 .vue-flow__group-node {
-  padding: 15px;
-  width: 300px;
-  height: 300px;
-  border: solid 1px black;
-  background: whitesmoke;
+  /* padding: 15px; */
+  /* width: 300px; */
+  /* height: 300px; */
+  /* border: solid 1px black; */
+  /* background: whitesmoke; */
 }
 </style>

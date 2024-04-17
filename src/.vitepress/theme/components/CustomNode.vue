@@ -20,7 +20,7 @@ const counter = ref(0);
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background: white;
+  /* background: white; */
   border: 1px solid black;
   border-radius: 4px;
 }

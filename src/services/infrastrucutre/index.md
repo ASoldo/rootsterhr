@@ -173,7 +173,7 @@ const nodes = ref([
     position: { x: 400, y: 0 },
     label: "Custom",
     type: "group",
-    class: "grad",
+    class: "grad-green",
     style: {
       width: "200px",
       height: "200px",
@@ -185,12 +185,14 @@ const nodes = ref([
   {
     id: '9a',
     label: 'Child a',
+    class: "grad",
     position: { x: 0, y: 50 },
     parentNode: '9',
   },
   {
     id: '9b',
     label: 'Child b',
+    class: "grad",
     position: { x: 0, y: 120 },
     parentNode: '9',
   },
