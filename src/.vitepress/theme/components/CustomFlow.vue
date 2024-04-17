@@ -71,8 +71,6 @@ const props = withDefaults(
 .vue-flow__node-output {
   padding: 10px;
   border-radius: 3px;
-  width: 100px;
-  /* 150px breaks left edge label */
   font-size: 12px;
   text-align: center;
   border-width: 1px;

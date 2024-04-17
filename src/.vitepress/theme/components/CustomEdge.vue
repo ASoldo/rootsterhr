@@ -1,9 +1,12 @@
 <template>
-  <BaseEdge :path="path[0]" :marker-end="markerEnd" :style="{ stroke: 'green', strokeWidth: '2px' }" />
+  <BaseEdge :path="path[0]" :marker-end="markerEnd"
+    :style="{ stroke: 'limegreen', strokeWidth: '1px', strokeOpacity: 1 }" />
+  <EdgeText :options="edgeText" :x="path[1]" :y="path[2]" :label="props.label" :label-show-bg="true"
+    :label-bg-style="props.labelBgStyle" />
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import type { EdgeProps } from "@vue-flow/core";
 import {
   BaseEdge,
@@ -12,9 +15,12 @@ import {
   useVueFlow,
   Position,
   getSmoothStepPath,
+  EdgeLabelOptions,
+  EdgeText,
 } from "@vue-flow/core";
 
 const props = defineProps<EdgeProps>();
+const edgeText = ref<EdgeLabelOptions>();
 
 const oppositeDirection = {
   [Position.Top]: Position.Bottom,
@@ -60,4 +66,6 @@ const path = computed(() =>
       : props.targetPosition,
   }),
 );
+console.log("Path: ", path.value);
+console.log("Props: ", props);
 </script>

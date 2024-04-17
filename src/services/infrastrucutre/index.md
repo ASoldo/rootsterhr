@@ -137,6 +137,8 @@ const edges = ref([
     sourceHandle: '9-target',
     type: 'custom',
     animated: true,
+    label: "HTTP Request Custom",
+    labelBgStyle: { fill: "yellow", width: 115 },
     markerEnd: {
       type: MarkerType.ArrowClosed,
       color: 'green',
@@ -148,6 +150,8 @@ const edges = ref([
     target: '9b',
     type: 'custom',
     animated: true,
+    label: "HTTP Request Custom",
+    labelBgStyle: { fill: "yellow", width: 115 },
     markerEnd: {
       type: MarkerType.ArrowClosed,
       color: 'green',
@@ -160,6 +164,8 @@ const edges = ref([
     targetHandle: '9-source',
     type: 'custom',
     animated: true,
+    label: "HTTP Request Custom",
+    labelBgStyle: { fill: "yellow", width: 115 },
     markerEnd: {
       type: MarkerType.ArrowClosed,
       color: 'green',
@@ -173,6 +179,8 @@ const edges = ref([
     sourceHandle: "1rights",
     type: 'custom',
     animated: true,
+    label: "HTTP Request Custom",
+    labelBgStyle: { fill: "yellow", width: 115 },
     markerEnd: {
       type: MarkerType.ArrowClosed,
       color: 'green',
@@ -186,6 +194,8 @@ const edges = ref([
     sourceHandle: "9-source",
     type: 'custom',
     animated: true,
+    label: "HTTP Request Custom",
+    labelBgStyle: { fill: "yellow", width: 115 },
     markerEnd: {
       type: MarkerType.ArrowClosed,
       color: 'green',
